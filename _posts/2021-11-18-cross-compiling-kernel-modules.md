@@ -88,9 +88,9 @@ make and everything should work properly.
 From **root folder of kernel source** run:
 ```sh
 # update current .config file
-make ARCH=arm CROSS_COMPILE=<arm-linux-gnueabihf- oldconfig
+$ make ARCH=arm CROSS_COMPILE=<arm-linux-gnueabihf- oldconfig
 # build 
-make ARCH=arm CROSS_COMPILE=arm-linux-gnueabihf- -j4
+$ make ARCH=arm CROSS_COMPILE=arm-linux-gnueabihf- -j4
 ```
 Once done, kernel directory are ready to build your module.
 
@@ -113,7 +113,7 @@ clean:
 From your module source code, run:
 
 ```sh 
-make
+$ make
 ```
 
 
