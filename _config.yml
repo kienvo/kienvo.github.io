@@ -16,7 +16,10 @@ timezone: Asia/Ho_Chi_Minh
 
 title: Chirpy # the main title
 
-tagline: A text-focused Jekyll theme # it will display as the sub-title
+tagline: # it will display as the sub-title
+  Thích thì chế một cái mà xài !
+  Hardware/Software and other stuff.
+
 
 description: >- # used by seo meta and the atom feed
   A minimal, responsive and feature-rich Jekyll theme for technical writing.
