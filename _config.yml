@@ -20,7 +20,10 @@ timezone: Asia/Shanghai
 
 title: Kien's Lab                          # the main title
 
-tagline: Hardware / Software and other stuff  # it will display as the sub-title
+tagline: 
+  Thích thì chế một cái mà xài !
+  Hardware/Software and other stuff. # it will display as the sub-title
+  
 
 description: >-                        # used by seo meta and the atom feed
   Personal blog about my project
