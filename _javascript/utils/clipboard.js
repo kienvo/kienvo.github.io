@@ -10,6 +10,8 @@ $(function() {
   const btnSelector = '.code-header>button';
   const ICON_SUCCESS = 'fas fa-check';
   const ATTR_TIMEOUT = 'timeout';
+  const ATTR_TITLE_SUCCEED = 'data-title-succeed';
+  const ATTR_TITLE_ORIGIN = 'data-original-title';
   const TIMEOUT = 2000; // in milliseconds
 
   function isLocked(node) {
@@ -41,7 +43,7 @@ $(function() {
   });
 
   $(btnSelector).tooltip({
-    trigger: 'click',
+    trigger: 'hover',
     placement: 'left'
   });
 
@@ -53,26 +55,24 @@ $(function() {
   const ICON_DEFAULT = getIcon(btnSelector);
 
   function showTooltip(btn) {
-    $(btn).tooltip('show');
+    const succeedTitle = $(btn).attr(ATTR_TITLE_SUCCEED);
+    $(btn).attr(ATTR_TITLE_ORIGIN, succeedTitle).tooltip('show');
   }
 
   function hideTooltip(btn) {
-    $(btn).tooltip('hide');
-    unlock(btn);
+    $(btn).tooltip('hide').removeAttr(ATTR_TITLE_ORIGIN);
   }
 
   function setSuccessIcon(btn) {
     let btnNode = $(btn);
     let iconNode = btnNode.children();
     iconNode.attr('class', ICON_SUCCESS);
-    lock(btn);
   }
 
   function resumeIcon(btn) {
     let btnNode = $(btn);
     let iconNode = btnNode.children();
     iconNode.attr('class', ICON_DEFAULT);
-    unlock(btn);
   }
 
   clipboard.on('success', (e) => {
@@ -85,10 +85,12 @@ $(function() {
 
     setSuccessIcon(trigger);
     showTooltip(trigger);
+    lock(trigger);
 
     setTimeout(() => {
       hideTooltip(trigger);
       resumeIcon(trigger);
+      unlock(trigger);
     }, TIMEOUT);
 
   });
@@ -115,14 +117,14 @@ $(function() {
 
     // Switch tooltip title
 
-    const defaultTitle = target.attr('data-original-title');
-    const succeedTitle = target.attr('title-succeed');
+    const defaultTitle = target.attr(ATTR_TITLE_ORIGIN);
+    const succeedTitle = target.attr(ATTR_TITLE_SUCCEED);
 
-    target.attr('data-original-title', succeedTitle).tooltip('show');
+    target.attr(ATTR_TITLE_ORIGIN, succeedTitle).tooltip('show');
     lock(target);
 
     setTimeout(() => {
-      target.attr('data-original-title', defaultTitle);
+      target.attr(ATTR_TITLE_ORIGIN, defaultTitle);
       unlock(target);
     }, TIMEOUT);
 

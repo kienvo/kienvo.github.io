@@ -26,16 +26,17 @@
         background-color: var(--btn-paginator-hover-color);
       }
     }
+
     &.active {
       .page-link {
-        background-color: var(--btn-active-bg);
-        border-color: var(--btn-active-border-color);
-        box-shadow: 0 0 8px 0 var(--btn-paginator-shadow) !important;
+        background-color: var(--btn-paginator-hover-color);
         color: var(--btn-text-color);
       }
     }
+
     &.disabled {
       cursor: not-allowed;
+
       .page-link {
         color: rgba(108, 117, 125, 0.57);
         border-color: var(--btn-paginator-border-color);
@@ -71,9 +72,14 @@
     .post-meta {
       i {
         font-size: 0.73rem;
+
+        &:not(:first-child) {
+          margin-left: 1.2rem;
+        }
       }
-      span:not(:last-child) {
-        margin-right: 1.2rem;
+
+      em {
+        @extend %normal-font-style;
       }
     }
 
@@ -104,7 +110,6 @@
     }
 
   } // .post-preview
-
 } // #post-list
 
 /* Hide SideBar and TOC */
@@ -124,9 +129,9 @@
 
 /* Sidebar is visible */
 @media all and (min-width: 831px) {
-
   #post-list {
     margin-top: 1.5rem;
+
     .post-preview .post-meta {
       .pin {
         background: var(--pin-bg);
