@@ -116,7 +116,7 @@ From your module source code, run:
 $ make
 ```
 
-<!-- just for trigger deploy -->
+<!-- [Reference](https://blukat.me/2017/12/cross-compile-arm-kernel-module/) -->
 
 
 
