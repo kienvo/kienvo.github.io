@@ -12,13 +12,13 @@ Just got to compile a driver for `ti-ads1220` running with `Orange Pi Zero`.
 I've figure out some stuff when digging to kernel modules. 
 Below is how I config cross build for my Pi.
 
-## 1. Target system
+## Target system
 
 `Orange Pi Zero` running `Armbian Bionic 20.02.1` with `Linux 5.4.20-sunxi`
 
 ![alt target-system](/assets/cross-compiling-kernel-modules/target-system.png "armbian orange pi zero")
 
-## 2. Download kernel source
+## Download kernel source
 
 Download kernel source from [kernel.org](https://mirrors.edge.kernel.org/pub/linux/kernel/)
 
@@ -30,7 +30,7 @@ the target system. Otherwise, you would be end up with:
 My target is `linux-5.4.20-sunxi` so I downloaded `linux-5.4.20.tar.gz`. 
 Note that the `-sunxi` suffix could be add later by `.config` file.
 
-## 3. Cross compile  toolchain
+## Cross compile  toolchain
 
 `arm-linux-gnueabihf` working well for me. 
 On Debian just run:
@@ -39,7 +39,7 @@ $ sudo apt install gcc-arm-linux-gnueabihf
 ``` 
 and every things works like a charm. Google it for more information or how to install it on other distro.
 
-## 4. The kernel build config
+## The kernel build config
 
 The build configuration must be exact the same configuration 
 of our target system.
@@ -56,7 +56,7 @@ In my case, I'm using:
 then use `scp` to copy `.config` from Pi to **root folder of kernel source** has just
 downloaded.
 
-## 5. Linux kernel suffix
+## Linux kernel suffix
 
 ### TL;DR
 
@@ -83,7 +83,7 @@ The `.config` file you had taken from the running target,
 change `CONFIG_LOCALVERSION=""` to `CONFIG_LOCALVERSION="-sunxi"` before run 
 make and everything should work properly.
 
-## 6. Build the kernel
+## Build the kernel
 
 From **root folder of kernel source** run:
 ```sh
@@ -94,7 +94,7 @@ $ make ARCH=arm CROSS_COMPILE=arm-linux-gnueabihf- -j4
 ```
 Once done, kernel directory are ready to build your module.
 
-## 7. Build the module
+## Build the module
 
 A simple Makefile
 
