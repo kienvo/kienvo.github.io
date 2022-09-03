@@ -1,0 +1,30 @@
+digraph G {
+	splines="FALSE";
+
+	/* Entities */
+	main [label="main.o"]
+	foo1 [label="foo1.o"]
+	foo2 [label="foo2.o"]
+	crt [label="crt.a"]
+	dll [label="thư viện động"]
+
+	mainc [label="main.c"]
+	foo1c [label="foo1.c"]
+	foo2c [label="foo2.c"]
+
+	example [label="example.elf"]
+	
+	/* Relationships */
+	mainc -> main[label="biên dịch"]
+	foo1c -> foo1
+	foo2c -> foo2
+
+	main -> example [label="linking"]
+	foo1 -> example
+	foo2 -> example
+	crt -> example
+	dll -> example
+
+	/* Ranks */
+	{ rank=same; main; };
+}
