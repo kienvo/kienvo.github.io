@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Makefile tiếng Việt"
-image: ''
+image: '/assets/makefile-tieng-viet/build-order.svg'
 date: 2022-09-03 14:00 +0700
 tags: [makefile]
 description: 'Cách sử dụng Makefile'
