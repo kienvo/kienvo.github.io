@@ -10,7 +10,7 @@ categories: [raspberry-pi]
 
 ## The problem
 
-Deployment was an unnecessary activity. It been a long time since I started to learn programming, I only make for myself softwares which would be abandon for years later. If you want to run it again, just recompile that code.
+Deployment might be an unnecessary activity when developing softwares. It been a long time since I started to learn programming, I only make for myself softwares which would be abandon for years later. If you want to run it again, just recompile that code.
 
 > But what if you want that software to run on your friend computer ? Did you ever copy your executable file to another Windows machine, and it cannot run, but still run on your machine perfectly? Want to install a whole toolchain, copy the code to build on that machine (or 1000 may be) ? But I know someone really do this, Install Visual Studio 2019 on another machine in order to run a C# Winform app he build =]]. 
 
@@ -29,7 +29,7 @@ Static linking would be easy for low-tech person to use the software, especially
 
 ## MSYS2
 
-`msys2` is the only tool that support Qt library, and can install additional library, and natively run  on Windows as I consider. You can take a look at [msys2 packages], it seem like every open source library which could installed on Linux, were compiled for msys2 and supported cross platform too. I'm doing the development on Linux then using Windows and msys2 to build the releases.
+`msys2` is the only tool that support Qt library, and can install additional library, and natively run  on Windows as I consider. You can take a look at [msys2 packages], it seem like almost every open source library which could installed on Linux, were compiled for msys2 and supported cross platform too. I'm doing the development on Linux then using Windows and msys2 to build the releases.
 
 > Sorry, I didn't use Qt Creator.
 
@@ -37,7 +37,7 @@ MSYS2 have `mingw-w64-x86_64-qt5-base` contain the base of Qt5 library. It have 
 
 For a normal build, you need 4 packages
 
-- `msys-base` -
+- `msys-base` 
 - `make`
 - `mingw-w64-x86_64-gcc`
 - `mingw-w64-x86_64-qt5`
