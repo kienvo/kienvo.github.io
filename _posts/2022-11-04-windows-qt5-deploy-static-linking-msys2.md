@@ -2,7 +2,7 @@
 layout: post
 title:  "Windows Qt application deployment with static linking"
 image: '/assets/rpi3b+-undervoltage-uart-console/console.png'
-date: 2022-11-10 12:00 +0700
+date: 2022-11-04 12:00 +0700
 tags: [qt, msys2, windows]
 description: 'How to deploy a Qt application with on Windows using MSYS2.'
 categories: [raspberry-pi]
