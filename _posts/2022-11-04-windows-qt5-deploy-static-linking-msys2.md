@@ -12,20 +12,25 @@ categories: [raspberry-pi]
 
 Deployment might be an unnecessary activity when developing softwares. It been a long time since I started to learn programming, I only make for myself softwares which would be abandon for years later. If you want to run it again, just recompile that code.
 
-> :grey_question:
->
-> But what if you want that software to run on your friend computer ? Did you ever copy your executable file to another Windows machine, and it cannot run, but still run on your machine perfectly? Want to install a whole toolchain, copy the code to build on that machine (or 1000 may be) ? But I know someone really do this, Install Visual Studio 2019 on another machine in order to run a C# Winform app he build =]]. 
+{: .prompt-warning}
+> **But what if you want that software to run on your friend computer ?**
+> 
+> Did you ever copy your executable file to another Windows machine, and it cannot run, but still run on your machine perfectly? Want to install a whole toolchain, copy the code to build on that machine (or 1000 may be) ? But I know someone really do this, Install Visual Studio 2019 on another machine in order to run a C# Winform app he build =]]. 
+
 
 There a two way to deploy an application to another Windows machine:
 
 - Dynamic linking - copy numberous `.dll` files to executable file. Many huge software such as Adobe Photoshop, Google Chrome, etc is using this way. Because shared library alway fast and optimized. But, the size and number of files is large, this would be zipped and ship with a `installer`.
 - Static linking - "One file to run them all". All the used library will be linked into a single executable file. But the file would get bigger and quite slow, not to mention compiling and linking speed, terribly slow.
 
-Static linking would be easy for low-tech person to use the software, especially when the software is small.
+{: .prompt-info}
 
+> **Static linking would be easy for low-tech person to use the software, especially when the software is small.**
+> 
 > I have build a small [physic engine](https://github.com/kienvo/physics-engine-from-scratch) for learning purpose, my co-worker find it interesting. He want me to send him this software for his child to play. I didn't have time until now. This piece of software wasn't used Qt so this easy to link statically.
 >
 > One of my friends want me to build a motor conntrol pannel application that run on Windows for him. Once again I need to deploy this for him, since the last time I try to statically link [my app](https://github.com/kienvo/p10-frame-maker) was not succeed untill now.
+> 
 
 > I'm using Windows as a build machine, at all the time I use Ubuntu.
 
@@ -33,6 +38,7 @@ Static linking would be easy for low-tech person to use the software, especially
 
 `msys2` is the only tool that support Qt library, and can install additional library, and natively run  on Windows as I consider. You can take a look at [msys2 packages], it seem like almost every open source library which could installed on Linux, were compiled for msys2 and supported cross platform too. I'm doing the development on Linux then using Windows and msys2 to build the releases.
 
+{: .prompt-danger}
 > Sorry, I didn't use Qt Creator.
 
 MSYS2 have `mingw-w64-x86_64-qt5-base` contain the base of Qt5 library. It have multiple extra package for multiple purpose. Especially `mingw-w64-x86_64-qt5-static`, contain static library and utility for linking.
@@ -48,6 +54,7 @@ And for statically linking, one additonal package
 
 - `mingw-w64-x86_64-qt5-static`
 
+{: .prompt-tip}
 > `msys2` uses `pacman`, so using it is similar to Arch-based distros pacman
 >
 > - Install package: `pacman -Sy <package-name>`
