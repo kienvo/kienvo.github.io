@@ -12,6 +12,8 @@ categories: [raspberry-pi]
 
 Deployment might be an unnecessary activity when developing softwares. It been a long time since I started to learn programming, I only make for myself softwares which would be abandon for years later. If you want to run it again, just recompile that code.
 
+> :grey_question:
+>
 > But what if you want that software to run on your friend computer ? Did you ever copy your executable file to another Windows machine, and it cannot run, but still run on your machine perfectly? Want to install a whole toolchain, copy the code to build on that machine (or 1000 may be) ? But I know someone really do this, Install Visual Studio 2019 on another machine in order to run a C# Winform app he build =]]. 
 
 There a two way to deploy an application to another Windows machine:
