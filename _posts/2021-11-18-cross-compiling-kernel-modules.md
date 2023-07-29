@@ -1,7 +1,6 @@
 ---
 layout: post
 title:  "Cross compiling kernel modules"
-image: ''
 date:   2021-11-18 23:27
 tags: [kernel, arm, modules, driver, cross-compile]
 description: 'Note for config linux kernel build'
