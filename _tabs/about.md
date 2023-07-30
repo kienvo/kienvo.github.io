@@ -1,6 +1,6 @@
 ---
-title: About
-icon: fas fa-info fa-info-circle
+# the default layout is 'page'
+icon: fas fa-info-circle
 order: 4
 ---
 
