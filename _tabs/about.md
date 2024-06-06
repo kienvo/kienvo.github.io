@@ -11,7 +11,10 @@ image:
   alt: Dien-Nhung Nguyen - Author of KIENLAB
 ---
 
-Hi. I'm Dien-Nhung Nguyen (Nguyễn Phú Điền Nhung) - Author of `kienlab.com`.
+Hi. I'm Dien-Nhung Nguyen (Nguyễn Phú Điền Nhung) - Author of KIENLAB.
+
+![Dien-Nhung Nguyen - Author of KIENLAB](/assets/about/dien-nhung-nguyen.jpg)
+{: .w-50 .left}
 
 If you see a nickname `kienvo` elsewhere, that's probably me. This site archives
 things I've learned to reuse by myself or to anyone who is interested. The

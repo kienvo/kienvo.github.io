@@ -14,15 +14,17 @@ timezone: Asia/Ho_Chi_Minh
 # jekyll-seo-tag settings › https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/usage.md
 # ↓ --------------------------
 
-title: Kien's Lab                          # the main title
+title: KIENLAB                          # the main title
 
 tagline: # it will display as the sub-title
-  Thích thì chế một cái mà xài !
-  Hardware/Software and other stuff.
-
+  Thích thì chế một cái mà xài! <br>
+  I write about things that is powered by electricity.
+  
 
 description: >-                        # used by seo meta and the atom feed
-  Personal blog about my project
+  KIENLAB is a personal blog of Dien-Nhung Nguyen (kienvo). 
+  It's wrote about things that is powered by electricity. 
+  Dien-Nhung Nguyen (kienvo) is an electronic enthusiast, a hardware hacker, and a rice farmer in Vietnam.
 
 # fill in the protocol & hostname for your site, e.g., 'https://username.github.io'
 # Fill in the protocol & hostname for your site.
@@ -38,7 +40,7 @@ twitter:
 social:
   # Change to your full name.
   # It will be displayed as the default author of the posts and the copyright owner in the Footer
-  name: Dien-Nhung Nguyen
+  name: Dien-Nhung Nguyen (kienvo)
   email: dien.nhung@kienlab.com             # change to your email address
   links:
     # The first element serves as the copyright owner's link
